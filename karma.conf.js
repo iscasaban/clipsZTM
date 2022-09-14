@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/clips-ztm'),
+      dir: require('path').join(__dirname, './coverage/clips'),
       subdir: '.',
       reporters: [
         { type: 'html' },
