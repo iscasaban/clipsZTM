@@ -22,8 +22,8 @@ export class RegisterComponent {
   confirm_password = new FormControl('', [Validators.required]);
   phoneNumber = new FormControl('', [
     Validators.required,
-    Validators.minLength(13),
-    Validators.maxLength(13),
+    Validators.minLength(11),
+    Validators.maxLength(11),
   ]);
 
   showAlert = false;
