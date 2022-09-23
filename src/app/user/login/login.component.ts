@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
     this.alertColor = 'green';
   }
 
-  //Error in event handler: TypeError: Assignment to constant variable.
+  //TODO:  Error in event handler: TypeError: Assignment to constant variable.
 
   //async login() {
   //   this.showAlert = true;
