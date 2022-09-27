@@ -20,3 +20,5 @@ export class EmailTaken implements AsyncValidator {
     return response.length ? { EmailTaken: true } : null;
   };
 }
+
+// FIXME: email taken validator  not working. The form can't be submitted, but there's no alert message if the email is taken.
