@@ -27,4 +27,15 @@ describe('TabComponent', () => {
 
     expect(element).toBeTruthy();
   });
+
+  it('should not have .hidden class', () => {
+    component.active = true;
+    fixture.detectChanges();
+
+    const element = fixture.debugElement.query(By.css('.hidden'));
+    const element2 = fixture.nativeElement.querySelector('.hidden');
+    const element3 = document.querySelector('.hidden');
+
+    expect(element).not.toBeTruthy();
+  });
 });
