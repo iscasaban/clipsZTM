@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component } from '@angular/core';
+import { By } from '@angular/platform-browser';
 import { TabsContainerComponent } from './tabs-container.component';
 import { TabComponent } from '../tab/tab.component';
 
@@ -29,5 +30,16 @@ describe('TabsContainerComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should have two tabs', () => {
+    const tabs = fixture.debugElement.queryAll(By.css('li'));
+    const containerComponent = fixture.debugElement.query(
+      By.directive(TabsContainerComponent)
+    );
+    const tabsProp = containerComponent.componentInstance.tabs;
+
+    expect(tabs.length).toBe(2);
+    expect(tabsProp.length).toBe(2);
   });
 });
